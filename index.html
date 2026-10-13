@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karhutla Immersive Experience</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+        body, html { width: 100vw; height: 100vh; overflow: hidden; background-color: #050508; font-family: sans-serif; }
+        
+        /* Navigasi Khas Awwwards */
+        header { position: absolute; top: 0; left: 0; width: 100%; padding: 35px 60px; display: flex; justify-content: space-between; align-items: center; z-index: 10; }
+        .logo { font-weight: 800; color: #fff; letter-spacing: 2px; font-size: 0.9rem; }
+        .menu-items { display: flex; gap: 40px; }
+        .menu-items a { color: #888; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .menu-items a:hover { color: #ff4500; }
+
+        /* Jendela Utama Gambar/Video Karhutla */
+        .visual-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .fire-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5) contrast(1.3) saturate(1.2);
+        }
+
+        /* Lapisan Teks Raksasa yang Menyatu di Tengah */
+        .bg-text { 
+            position: absolute; 
+            width: 100%; 
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            text-align: center; 
+            font-size: 14vw; 
+            font-weight: 900; 
+            color: rgba(255, 255, 255, 0.9);
+            mix-blend-mode: overlay; /* Membuat teks menyatu secara transparan dengan api di belakangnya */
+            letter-spacing: -6px; 
+            line-height: 0.8; 
+            z-index: 2; 
+            pointer-events: none; 
+            font-family: 'Impact', 'Arial Black', sans-serif; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">KARHUTLA / LABS</div>
+        <div class="menu-items">
+            <a href="#">[ Dampak ]</a>
+            <a href="#">[ Edukasi ]</a>
+            <a href="#">[ Kontribusi ]</a>
+        </div>
+    </header>
+
+    <!-- Visual Kobaran Api Sinematik -->
+    <div class="visual-container">
+        <video class="fire-bg" autoplay loop muted playsinline>
+            <source src="https://mixkit.co" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="bg-text">BURNED</div>
+
+</body>
+</html>
